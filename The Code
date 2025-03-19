@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DPDP 2025 Act Compliance Checklist</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]::placeholder,
+        input[type="email"]::placeholder {
+            color: #999;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        .report {
+            margin-top: 30px;
+            padding: 15px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .remark {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .remark a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .remark a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <h1>DPDP 2025 Act Compliance Checklist</h1>
+
+    <!-- Form Section -->
+    <form id="checklist-form" action="https://formspree.io/f/mnnjvekp" method="POST">
+        <!-- User Information Section -->
+        <h2>Provide Your Information</h2>
+        <div style="display: flex; flex-direction: column; gap: 15px; max-width: 400px;">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+            <label for="mobile">Phone:</label>
+            <input type="text" id="mobile" name="mobile" required placeholder="Enter your phone number">
+
+            <label for="organisation">Organisation:</label>
+            <input type="text" id="organisation" name="organisation" required placeholder="Enter your organisation">
+        </div>
+
+        <hr>
+
+        <!-- Checklist Sections -->
+        <h2>1. General Compliance</h2>
+        <label><input type="checkbox" class="gc-checklist"> Are all personnel aware of the DPDP 2025 Act and its implications?</label>
+        <label><input type="checkbox" class="gc-checklist"> Is there a designated Data Protection Officer (DPO) in place?</label>
+        <label><input type="checkbox" class="gc-checklist"> Are there documented policies and procedures for data protection?</label>
+
+        <h2>2. Data Fiduciary Responsibilities</h2>
+        <label><input type="checkbox" class="dfr-checklist"> Have you registered as a Data Fiduciary?</label>
+        <label><input type="checkbox" class="dfr-checklist"> Are there clear notices provided to Data Principals regarding data processing?</label>
+        <label><input type="checkbox" class="dfr-checklist"> Is there a process for obtaining verifiable consent from Data Principals?</label>
+
+        <h2>3. Consent Management</h2>
+        <label><input type="checkbox" class="cm-checklist"> Is there a Consent Management Platform in use?</label>
+        <label><input type="checkbox" class="cm-checklist"> Are there mechanisms for Data Principals to withdraw consent easily?</label>
+        <label><input type="checkbox" class="cm-checklist"> Is consent recorded and easily accessible for audit purposes?</label>
+
+        <h2>4. Data Security Measures</h2>
+        <label><input type="checkbox" class="dsm-checklist"> Are reasonable security safeguards implemented to protect personal data?</label>
+        <label><input type="checkbox" class="dsm-checklist"> Is personal data encrypted, masked, or tokenized as necessary?</label>
+        <label><input type="checkbox" class="dsm-checklist"> Are access controls in place for data processing systems?</label>
+        <label><input type="checkbox" class="dsm-checklist"> Are regular security audits and vulnerability assessments conducted?</label>
+        <label><input type="checkbox" class="dsm-checklist"> Is there an incident response plan for data breaches?</label>
+        <label><input type="checkbox" class="dsm-checklist"> Is there regular employee training on data security best practices?</label>
+        <label><input type="checkbox" class="dsm-checklist"> Are data masking and tokenization techniques employed?</label>
+        <label><input type="checkbox" class="dsm-checklist"> Is monitoring and logging implemented for data access?</label>
+        <label><input type="checkbox" class="dsm-checklist"> Are there data backup and recovery procedures in place?</label>
+        <label><input type="checkbox" class="dsm-checklist"> Are third-party security assessments conducted?</label>
+
+        <h2>5. Breach Notification Procedures</h2>
+        <label><input type="checkbox" class="bnp-checklist"> Is there a process for identifying and reporting data breaches?</label>
+        <label><input type="checkbox" class="bnp-checklist"> Are affected Data Principals notified of breaches in a timely manner?</label>
+        <label><input type="checkbox" class="bnp-checklist"> Is there a record of breach incidents and responses?</label>
+
+        <h2>6. Data Processing Practices</h2>
+        <label><input type="checkbox" class="dpp-checklist"> Is personal data processed only for specified purposes?</label>
+        <label><input type="checkbox" class="dpp-checklist"> Are data retention policies in place and followed?</label>
+        <label><input type="checkbox" class="dpp-checklist"> Is there evidence of regular Data Protection Impact Assessments (DPIAs)?</label>
+
+        <h2>7. Rights of Data Principals</h2>
+        <label><input type="checkbox" class="rdp-checklist"> Are Data Principals informed about their rights under the DPDP Act?</label>
+        <label><input type="checkbox" class="rdp-checklist"> Is there a process for Data Principals to exercise their rights (access, rectification, erasure)?</label>
+        <label><input type="checkbox" class="rdp-checklist"> Are responses to Data Principal requests documented and tracked?</label>
+
+        <h2>8. Training and Awareness</h2>
+        <label><input type="checkbox" class="ta-checklist"> Are staff trained on data protection principles and the DPDP Act?</label>
+        <label><input type="checkbox" class="ta-checklist"> Is there ongoing awareness and training for new employees?</label>
+        <label><input type="checkbox" class="ta-checklist"> Are training materials and records maintained?</label>
+
+        <h2>9. Third-Party Contracts</h2>
+        <label><input type="checkbox" class="tpc-checklist"> Are data processing agreements in place with third-party vendors?</label>
+        <label><input type="checkbox" class="tpc-checklist"> Do contracts include data protection clauses as per DPDP requirements?</label>
+        <label><input type="checkbox" class="tpc-checklist"> Is there a process for monitoring third-party compliance?</label>
+
+        <h2>10. Audit and Review</h2>
+        <label><input type="checkbox" class="ar-checklist"> Is there a schedule for regular audits of data protection practices?</label>
+        <label><input type="checkbox" class="ar-checklist"> Are audit findings documented and action plans developed?</label>
+        <label><input type="checkbox" class="ar-checklist"> Is there a continuous improvement process based on audit results?</label>
+
+        <!-- Submit Button -->
+        <button type="button" id="submit-btn">Submit</button>
+    </form>
+
+    <!-- Report Section -->
+    <div class="report hidden" id="report">
+        <h2>Audit Checklist Summary</h2>
+        <table id="audit-table">
+            <thead>
+                <tr>
+                    <th>Section</th>
+                    <th>Total Items</th>
+                    <th>Items Completed</th>
+                    <th>Compliance Score (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows for each section -->
+                <!-- General Compliance -->
+                <tr>
+                    <td>General Compliance</td>
+                    <td>3</td>
+                    <td id="gc-completed">0</td>
+                    <td id="gc-score">0%</td>
+                </tr>
+                <!-- Data Fiduciary Responsibilities -->
+                <tr>
+                    <td>Data Fiduciary Responsibilities</td>
+                    <td>3</td>
+                    <td id="dfr-completed">0</td>
+                    <td id="dfr-score">0%</td>
+                </tr>
+                <!-- Consent Management -->
+                <tr>
+                    <td>Consent Management</td>
+                    <td>3</td>
+                    <td id="cm-completed">0</td>
+                    <td id="cm-score">0%</td>
+                </tr>
+                <!-- Data Security Measures -->
+                <tr>
+                    <td>Data Security Measures</td>
+                    <td>10</td>
+                    <td id="dsm-completed">0</td>
+                    <td id="dsm-score">0%</td>
+                </tr>
+                <!-- Breach Notification Procedures -->
+                <tr>
+                    <td>Breach Notification Procedures</td>
+                    <td>3</td>
+                    <td id="bnp-completed">0</td>
+                    <td id="bnp-score">0%</td>
+                </tr>
+                <!-- Data Processing Practices -->
+                <tr>
+                    <td>Data Processing Practices</td>
+                    <td>3</td>
+                    <td id="dpp-completed">0</td>
+                    <td id="dpp-score">0%</td>
+                </tr>
+                <!-- Rights of Data Principals -->
+                <tr>
+                    <td>Rights of Data Principals</td>
+                    <td>3</td>
+                    <td id="rdp-completed">0</td>
+                    <td id="rdp-score">0%</td>
+                </tr>
+                <!-- Training and Awareness -->
+                <tr>
+                    <td>Training and Awareness</td>
+                    <td>3</td>
+                    <td id="ta-completed">0</td>
+                    <td id="ta-score">0%</td>
+                </tr>
+                <!-- Third-Party Contracts -->
+                <tr>
+                    <td>Third-Party Contracts</td>
+                    <td>3</td>
+                    <td id="tpc-completed">0</td>
+                    <td id="tpc-score">0%</td>
+                </tr>
+                <!-- Audit and Review -->
+                <tr>
+                    <td>Audit and Review</td>
+                    <td>3</td>
+                    <td id="ar-completed">0</td>
+                    <td id="ar-score">0%</td>
+                </tr>
+                <!-- Total -->
+                <tr>
+                    <th>Total</th>
+                    <th>37</th>
+                    <th id="total-completed">0</th>
+                    <th id="total-score">0%</th>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Remark Section -->
+        <div class="remark" id="remark">
+            <!-- Remarks will be dynamically inserted here -->
+        </div>
+
+        <!-- Download Button -->
+        <button id="download-btn">Download PDF</button>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Section configuration
+        const sections = {
+            "gc": { total: 3, completedId: "gc-completed", scoreId: "gc-score" },
+            "dfr": { total: 3, completedId: "dfr-completed", scoreId: "dfr-score" },
+            "cm": { total: 3, completedId: "cm-completed", scoreId: "cm-score" },
+            "dsm": { total: 10, completedId: "dsm-completed", scoreId: "dsm-score" },
+            "bnp": { total: 3, completedId: "bnp-completed", scoreId: "bnp-score" },
+            "dpp": { total: 3, completedId: "dpp-completed", scoreId: "dpp-score" },
+            "rdp": { total: 3, completedId: "rdp-completed", scoreId: "rdp-score" },
+            "ta": { total: 3, completedId: "ta-completed", scoreId: "ta-score" },
+            "tpc": { total: 3, completedId: "tpc-completed", scoreId: "tpc-score" },
+            "ar": { total: 3, completedId: "ar-completed", scoreId: "ar-score" }
+        };
+
+        // Function to update scores
+        function updateScores() {
+            let totalCompleted = 0;
+            let totalItems = 0;
+
+            Object.keys(sections).forEach(section => {
+                const checkboxes = document.querySelectorAll(`.${section}-checklist`);
+                const completed = Array.from(checkboxes).filter(checkbox => checkbox.checked).length;
+                const total = sections[section].total;
+
+                // Update individual section's completed and score
+                document.getElementById(sections[section].completedId).innerText = completed;
+                document.getElementById(sections[section].scoreId).innerText = ((completed / total) * 100).toFixed(2) + "%";
+
+                // Update totals
+                totalCompleted += completed;
+                totalItems += total;
+            });
+
+            // Update total compliance score
+            const totalScore = ((totalCompleted / totalItems) * 100).toFixed(2);
+            document.getElementById("total-completed").innerText = totalCompleted;
+            document.getElementById("total-score").innerText = totalScore + "%";
+
+            // Add remarks based on the total score
+            const remarkDiv = document.getElementById("remark");
+            if (totalScore <= 80) {
+                remarkDiv.innerHTML = "Remarks: Efforts needed. We will help you comply, 📞 <strong>8010101070</strong> or ✉️ <a href='mailto:sales@ngbps.com'><strong>sales@ngbps.com</strong></a>";
+            } else if (totalScore <= 90) {
+                remarkDiv.innerHTML = "Remarks: Good, Almost there. We will help you comply, 📞 <strong>8010101070</strong> or ✉️ <a href='mailto:sales@ngbps.com'><strong>sales@ngbps.com</strong></a>";
+            } else {
+                remarkDiv.innerHTML = "Remarks: Very Good - Fully Compliant. Explore our services to ensure you maintain this score, 📞 <strong>8010101070</strong> or ✉️ <a href='mailto:sales@ngbps.com'><strong>sales@ngbps.com</strong></a>";
+            }
+        }
+
+        // Add event listeners to all checkboxes to update scores dynamically
+        document.querySelectorAll("input[type='checkbox']").forEach(checkbox => {
+            checkbox.addEventListener("change", updateScores);
+        });
+
+        // Show report and send data to Formspree
+        document.getElementById("submit-btn").addEventListener("click", function () {
+            // Validate required fields
+            if (!document.getElementById("name").value || 
+                !document.getElementById("email").value || 
+                !document.getElementById("organisation").value || 
+                !document.getElementById("mobile").value) {
+                
+                alert("Please fill in all the required details before proceeding.");
+                return;
+            }
+
+            // Gather checklist responses
+            const checklistResponses = [];
+            document.querySelectorAll("input[type='checkbox']").forEach(checkbox => {
+                const question = checkbox.parentElement.textContent.trim();
+                if (checkbox.checked) {
+                    checklistResponses.push(question + ": Yes");
+                } else {
+                    checklistResponses.push(question + ": No");
+                }
+            });
+
+            // Prepare data for Formspree
+            const formData = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                mobile: document.getElementById("mobile").value,
+                organisation: document.getElementById("organisation").value,
+                checklist: checklistResponses.join("\n")
+            };
+
+            // Send data to Formspree
+            fetch('https://formspree.io/f/mnnjvekp', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert("Checklist submitted successfully!");
+                    document.getElementById("report").classList.remove("hidden");
+                    updateScores(); // Update scores when showing the report
+                } else {
+                    alert("There was a problem with the submission.");
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert("There was an error submitting the checklist.");
+            });
+        });
+
+        // Download PDF functionality
+        document.getElementById("download-btn").addEventListener("click", function () {
+            // Temporarily remove the download button from the DOM
+            const downloadBtn = document.getElementById("download-btn");
+            downloadBtn.remove();
+
+            // Use html2canvas to capture the report section (excluding the button)
+            html2canvas(document.getElementById("report")).then(canvas => {
+                const { jsPDF } = window.jspdf;
+                const doc = new jsPDF();
+
+                // Add the captured content to PDF
+                const imgData = canvas.toDataURL("image/png");
+                const imgWidth = 190; // Max width for A4 paper
+                const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+                doc.addImage(imgData, "PNG", 10, 10, imgWidth, imgHeight);
+                doc.save("Audit_Checklist_Summary.pdf");
+
+                // Re-add the download button to the DOM
+                document.getElementById("report").appendChild(downloadBtn);
+            });
+        });
+    </script>
+</body>
+</html>
